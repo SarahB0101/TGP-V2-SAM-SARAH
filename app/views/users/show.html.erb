@@ -39,18 +39,18 @@
     <!-------------------------- CONTAINER -------------------------->
 
     <div class="container text-center">
-	    <h1>Voici la page du Gossip n°<%= @id%> </h1>
+	    <h1>Voici la page de <%= @first_name%> </h1>
 	    </br>
 	    </br>
 
 		<div class="card">
 			<div class="card-body">
-		  		<h3 class="card-title"><%= @user.first_name %> <%= @user.last_name %></h3>
+		  		<h3 class="card-title"><%= @users.first_name %> <%= @users.last_name %></h3>
 		  		<p class="card-text">
-		  			<%= @user.description %>
-		  			</br>Email : <%= @user.email %>
-		  			</br>Age :<%= @user.age %>
-		  			</br>City : <%= @user.city.name %>
+		  			<%= @users.description %>
+		  			</br>Email : <%= @users.email %>
+		  			</br>Age :<%= @users.age %>
+		  			</br>City : <%= @users.city.name %>
 		  		</p>
 		  		
 		      	    	

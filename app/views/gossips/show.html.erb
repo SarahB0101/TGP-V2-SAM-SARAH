@@ -47,7 +47,7 @@
 		  		<h3 class="card-title"><%= @gossip.title %></h3>
 		  		<p class="card-text"><%= @gossip.content %></p>
 		  		<blockquote class="blockquote mb-0">
-		  			 <footer class="blockquote-footer text-right"><%= link_to "#{@gossip.user.full_name}", user_path(@gossip.user.id) %> </footer></blockquote>
+		  			 <footer class="blockquote-footer text-right"><%= link_to "#{@gossip.user.first_name}", user_path(@gossip.user.id) %> </footer></blockquote> 
 		      	    	
 
 		    </div>

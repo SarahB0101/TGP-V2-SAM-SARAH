@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   # get 'gossips/new', to: 'gossips#new' #on affiche le formulaire
   # post 'gossips', to: 'gossips#create' #puis on l'envoie
   resources :gossips
-  resources :users, only: [:index]
+  resources :users
+  
+  resources :gossips do
+  resources :users
+  end
   #get 'users/:id', to:'user#show', as: 'users'
   #get 'gossips/:id', to:'gossip#show', as: 'gossips'
   get 'welcome/:user_entry', to: 'welcome#show'
