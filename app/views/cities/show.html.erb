@@ -46,11 +46,12 @@
 	    <h1>Voici la page de la ville <%= @city.name%> </h1>
 	    </br>
 	    </br>
-	    <% Gossip.find(@gossip.user.city).each do |gossip| %>
+	    <% @city.users.each do |user| %>
+	    <% users.gossips %>
 			<div class="card">
 				<div class="card-body">
-			  		<h3 class="card-title"><%=link_to gossip.title, gossip_path(gossip.id) %> </h3>
-			  		<p class="card-text"><%= gossip.user.first_name %></p>
+			  		<h3 class="card-title"><%=link_to @gossip.title, gossip_path(@gossip.id) %> </h3>
+			  		<p class="card-text"><%= @gossip.user.first_name %></p>
 			      	    	
 			    </div>	
 	    	</div>
