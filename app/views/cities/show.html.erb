@@ -12,6 +12,7 @@
 
 
 
+
 	<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" <%= link_to 'The Gossip Project', index_path %> </a>
 
@@ -38,24 +39,24 @@
     <!-------------------------- CONTAINER -------------------------->
 
     <div class="container text-center">
-	    <h1>Voici la page du Gossip n°<%= @id%> </h1>
+    	</br>
 	    </br>
 	    </br>
+	    </br>
+	    <h1>Voici la page de la ville <%= @city.name%> </h1>
+	    </br>
+	    </br>
+	    <% Gossip.find(@gossip.user.city).each do |gossip| %>
+			<div class="card">
+				<div class="card-body">
+			  		<h3 class="card-title"><%=link_to gossip.title, gossip_path(gossip.id) %> </h3>
+			  		<p class="card-text"><%= gossip.user.first_name %></p>
+			      	    	
+			    </div>	
+	    	</div>
+	    <% end %>
 
-		<div class="card">
-			<div class="card-body">
-		  		<h3 class="card-title"><%= @gossip.title %></h3>
-		  		<p class="card-text"><%= @gossip.content %></p>
-		  		<blockquote class="blockquote mb-0">
-		  			 <footer class="blockquote-footer text-right">
-		  			 	<%= link_to "#{@gossip.user.first_name}", user_path(@gossip.user.id) %><br>
-		  			 	<%= link_to "#{@gossip.user.city.name}", city_path(@gossip.user.city) %> 
-
-		  			 </footer></blockquote> 
-		      	    	
-
-		    </div>
-    	</div>
+		
 
 	 
 
@@ -65,7 +66,8 @@
 	    </br>
 	    </br>
 	    </br>
-	    <a href="/">Retour sur l'accueil des gossips</a>
+	    <%= link_to 'Retour sur l\'accueil des gossips', index_path %>
+	    
 
 	</div>
 

@@ -21766,3 +21766,758 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 207ms (Views: 183.0ms | ActiveRecord: 4.4ms)
 
 
+Started GET "/index" for ::1 at 2019-08-07 10:12:10 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sarahbouchir/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by IndexController#show as HTML
+  Rendering index/show.html.erb within layouts/application
+  [1m[36mGossip Load (0.8ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/show.html.erb:80
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  Rendered index/show.html.erb within layouts/application (68.2ms)
+Completed 200 OK in 409ms (Views: 393.1ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/gossips/72" for ::1 at 2019-08-07 10:12:12 +0200
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mGossip Load (0.2ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:4
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:50
+  Rendered gossips/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 46ms (Views: 39.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/76" for ::1 at 2019-08-07 10:12:14 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCity Load (0.8ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:53
+  Rendered users/show.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 69ms (Views: 54.6ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/contact" for ::1 at 2019-08-07 10:12:23 +0200
+Processing by ContactController#show as HTML
+  Rendering contact/show.html.erb within layouts/application
+  Rendered contact/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 48ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for ::1 at 2019-08-07 10:12:24 +0200
+Processing by TeamController#show as HTML
+  Rendering team/show.html.erb within layouts/application
+  Rendered team/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 58ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for ::1 at 2019-08-07 10:12:24 +0200
+Processing by IndexController#show as HTML
+  Rendering index/show.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/show.html.erb:80
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  Rendered index/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 55ms (Views: 45.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/index" for ::1 at 2019-08-07 10:12:25 +0200
+Processing by IndexController#show as HTML
+  Rendering index/show.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/show.html.erb:80
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  Rendered index/show.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 75ms (Views: 63.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/gossips/new" for ::1 at 2019-08-07 10:12:26 +0200
+Processing by GossipsController#new as HTML
+  Rendering gossips/new.html.erb within layouts/application
+  Rendered gossips/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 42ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for ::1 at 2019-08-07 10:12:28 +0200
+Processing by IndexController#show as HTML
+  Rendering index/show.html.erb within layouts/application
+  [1m[36mGossip Load (11.2ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/show.html.erb:80
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  Rendered index/show.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 81ms (Views: 58.8ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/gossips/72" for ::1 at 2019-08-07 10:16:49 +0200
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:4
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:50
+  Rendered gossips/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 63ms (Views: 54.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/76" for ::1 at 2019-08-07 10:18:14 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:53
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 52ms (Views: 41.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/76" for ::1 at 2019-08-07 10:21:27 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:53
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 42ms (Views: 33.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/index" for ::1 at 2019-08-07 10:21:29 +0200
+Processing by IndexController#show as HTML
+  Rendering index/show.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/show.html.erb:80
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  Rendered index/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 48ms (Views: 41.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/gossips/72" for ::1 at 2019-08-07 10:21:31 +0200
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mGossip Load (0.6ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:4
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:51
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:52
+  Rendered gossips/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 48ms (Views: 36.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/gossips/72" for ::1 at 2019-08-07 10:21:42 +0200
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:4
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:51
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:52
+  Rendered gossips/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 44ms (Views: 36.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/gossips/72" for ::1 at 2019-08-07 10:21:56 +0200
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:4
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:51
+  [1m[36mCity Load (0.6ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:52
+  Rendered gossips/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 49ms (Views: 41.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/76" for ::1 at 2019-08-07 10:22:00 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:53
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 55ms (Views: 42.2ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/index" for ::1 at 2019-08-07 10:37:30 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sarahbouchir/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by IndexController#show as HTML
+  Rendering index/show.html.erb within layouts/application
+  [1m[36mGossip Load (0.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/show.html.erb:80
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  Rendered index/show.html.erb within layouts/application (161.2ms)
+Completed 200 OK in 483ms (Views: 390.2ms | ActiveRecord: 84.2ms)
+
+
+Started GET "/index" for ::1 at 2019-08-07 10:37:31 +0200
+Processing by IndexController#show as HTML
+  Rendering index/show.html.erb within layouts/application
+  [1m[36mGossip Load (1.8ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/show.html.erb:80
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (30.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  Rendered index/show.html.erb within layouts/application (54.8ms)
+Completed 200 OK in 131ms (Views: 82.9ms | ActiveRecord: 42.0ms)
+
+
+Started GET "/gossips/72" for ::1 at 2019-08-07 10:37:33 +0200
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mGossip Load (0.6ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:4
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:51
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:52
+  Rendered gossips/show.html.erb within layouts/application (29.0ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 6.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `city' for #<Gossip:0x00007f8242e01e30>):
+    49: 		  		<blockquote class="blockquote mb-0">
+    50: 		  			 <footer class="blockquote-footer text-right">
+    51: 		  			 	<%= link_to "#{@gossip.user.first_name}", user_path(@gossip.user.id) %><br>
+    52: 		  			 	<%= link_to "#{@gossip.user.city.name}", city_path(@gossip.city.id) %> 
+    53: 
+    54: 		  			 </footer></blockquote> 
+    55: 		      	    	
+  
+app/views/gossips/show.html.erb:52:in `_app_views_gossips_show_html_erb__2841215569483473815_70098722227160'
+Started GET "/gossips/72" for ::1 at 2019-08-07 10:37:58 +0200
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:4
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:51
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:52
+  Rendered gossips/show.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `city' for nil:NilClass):
+    49: 		  		<blockquote class="blockquote mb-0">
+    50: 		  			 <footer class="blockquote-footer text-right">
+    51: 		  			 	<%= link_to "#{@gossip.user.first_name}", user_path(@gossip.user.id) %><br>
+    52: 		  			 	<%= link_to "#{@gossip.user.city.name}", city_path(@user.city.id) %> 
+    53: 
+    54: 		  			 </footer></blockquote> 
+    55: 		      	    	
+  
+app/views/gossips/show.html.erb:52:in `_app_views_gossips_show_html_erb__2841215569483473815_70098677696880'
+Started GET "/gossips/72" for ::1 at 2019-08-07 10:38:20 +0200
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:4
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:51
+  [1m[36mCity Load (0.9ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:52
+  Rendered gossips/show.html.erb within layouts/application (12.6ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 2.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `city' for nil:NilClass):
+    49: 		  		<blockquote class="blockquote mb-0">
+    50: 		  			 <footer class="blockquote-footer text-right">
+    51: 		  			 	<%= link_to "#{@gossip.user.first_name}", user_path(@gossip.user.id) %><br>
+    52: 		  			 	<%= link_to "#{@gossip.user.city.name}", cities_path(@user.city.id) %> 
+    53: 
+    54: 		  			 </footer></blockquote> 
+    55: 		      	    	
+  
+app/views/gossips/show.html.erb:52:in `_app_views_gossips_show_html_erb__2841215569483473815_70098720005280'
+Started GET "/index" for ::1 at 2019-08-07 10:38:48 +0200
+Processing by IndexController#show as HTML
+  Rendering index/show.html.erb within layouts/application
+  [1m[36mGossip Load (8.0ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/show.html.erb:80
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  Rendered index/show.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 118ms (Views: 100.0ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/gossips/72" for ::1 at 2019-08-07 10:38:51 +0200
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mGossip Load (0.6ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:4
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:51
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:52
+  Rendered gossips/show.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `city' for nil:NilClass):
+    49: 		  		<blockquote class="blockquote mb-0">
+    50: 		  			 <footer class="blockquote-footer text-right">
+    51: 		  			 	<%= link_to "#{@gossip.user.first_name}", user_path(@gossip.user.id) %><br>
+    52: 		  			 	<%= link_to "#{@gossip.user.city.name}", city_path(@user.city.id) %> 
+    53: 
+    54: 		  			 </footer></blockquote> 
+    55: 		      	    	
+  
+app/views/gossips/show.html.erb:52:in `_app_views_gossips_show_html_erb__2841215569483473815_70098693149100'
+Started GET "/gossips/72" for ::1 at 2019-08-07 10:39:41 +0200
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:4
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:51
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:52
+  Rendered gossips/show.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `city' for nil:NilClass):
+    49: 		  		<blockquote class="blockquote mb-0">
+    50: 		  			 <footer class="blockquote-footer text-right">
+    51: 		  			 	<%= link_to "#{@gossip.user.first_name}", user_path(@gossip.user.id) %><br>
+    52: 		  			 	<%= link_to "#{@gossip.user.city.name}", city_path(@user.city.id) %> 
+    53: 
+    54: 		  			 </footer></blockquote> 
+    55: 		      	    	
+  
+app/views/gossips/show.html.erb:52:in `_app_views_gossips_show_html_erb__2841215569483473815_70098678611900'
+Started GET "/gossips/72" for ::1 at 2019-08-07 10:40:18 +0200
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:4
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:51
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:52
+  Rendered gossips/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 63ms (Views: 56.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/cities/72" for ::1 at 2019-08-07 10:40:20 +0200
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mCity Load (0.9ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/cities_controller.rb:4
+  Rendering cities/show.html.erb within layouts/application
+  Rendered cities/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 44ms (Views: 36.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cities/72" for ::1 at 2019-08-07 10:40:51 +0200
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/cities_controller.rb:4
+  Rendering cities/show.html.erb within layouts/application
+  Rendered cities/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 59ms (Views: 49.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cities/72" for ::1 at 2019-08-07 10:42:52 +0200
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/cities_controller.rb:4
+  Rendering cities/show.html.erb within layouts/application
+  Rendered cities/show.html.erb within layouts/application (9.1ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    45: 
+    46: 		<div class="card">
+    47: 			<div class="card-body">
+    48: 		  		<h3 class="card-title"><%= @users.first_name %> <%= @users.last_name %></h3>
+    49: 		  		<p class="card-text">
+    50: 		  			<%= @users.description %>
+    51: 		  			</br>Email : <%= @users.email %>
+  
+app/views/cities/show.html.erb:48:in `_app_views_cities_show_html_erb___3783426335436069865_70098679259320'
+Started GET "/cities/72" for ::1 at 2019-08-07 10:43:13 +0200
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/cities_controller.rb:4
+  Rendering cities/show.html.erb within layouts/application
+  Rendered cities/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 91ms (Views: 84.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cities/72" for ::1 at 2019-08-07 10:43:25 +0200
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/cities_controller.rb:4
+  Rendering cities/show.html.erb within layouts/application
+  Rendered cities/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 59ms (Views: 52.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/index" for ::1 at 2019-08-07 10:43:26 +0200
+Processing by IndexController#show as HTML
+  Rendering index/show.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/show.html.erb:80
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  Rendered index/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 69ms (Views: 61.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/index" for ::1 at 2019-08-07 10:46:45 +0200
+Processing by IndexController#show as HTML
+  Rendering index/show.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/show.html.erb:80
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  Rendered index/show.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 75ms (Views: 64.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/gossips/72" for ::1 at 2019-08-07 10:46:47 +0200
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mGossip Load (2.4ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:4
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:51
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:52
+  Rendered gossips/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 58ms (Views: 47.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/cities/72" for ::1 at 2019-08-07 10:46:49 +0200
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mCity Load (0.8ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/cities_controller.rb:4
+  Rendering cities/show.html.erb within layouts/application
+  Rendered cities/show.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `city' for nil:NilClass):
+    46: 	    <h1>Voici la page de la ville <%= @city.name%> </h1>
+    47: 	    </br>
+    48: 	    </br>
+    49: 	    <% Gossip.find_by(@user.city).each do |gossip| %>
+    50: 			<div class="card">
+    51: 				<div class="card-body">
+    52: 			  		<h3 class="card-title"><%=link_to gossip.title, gossip_path(gossip.id) %> </h3>
+  
+app/views/cities/show.html.erb:49:in `_app_views_cities_show_html_erb___3783426335436069865_70098722063380'
+Started GET "/cities/72" for ::1 at 2019-08-07 10:47:28 +0200
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/cities_controller.rb:4
+  Rendering cities/show.html.erb within layouts/application
+  Rendered cities/show.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `city' for nil:NilClass):
+    46: 	    <h1>Voici la page de la ville <%= @city.name%> </h1>
+    47: 	    </br>
+    48: 	    </br>
+    49: 	    <% Gossip.where(@user.city).each do |gossip| %>
+    50: 			<div class="card">
+    51: 				<div class="card-body">
+    52: 			  		<h3 class="card-title"><%=link_to gossip.title, gossip_path(gossip.id) %> </h3>
+  
+app/views/cities/show.html.erb:49:in `_app_views_cities_show_html_erb___3783426335436069865_70098702541500'
+Started GET "/index" for ::1 at 2019-08-07 10:47:37 +0200
+Processing by IndexController#show as HTML
+  Rendering index/show.html.erb within layouts/application
+  [1m[36mGossip Load (2.1ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/show.html.erb:80
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/index/show.html.erb:84
+  Rendered index/show.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 98ms (Views: 87.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/gossips/72" for ::1 at 2019-08-07 10:47:39 +0200
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mGossip Load (1.0ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:4
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:51
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:52
+  Rendered gossips/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 58ms (Views: 46.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/cities/72" for ::1 at 2019-08-07 10:47:40 +0200
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/cities_controller.rb:4
+  Rendering cities/show.html.erb within layouts/application
+  Rendered cities/show.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `city' for nil:NilClass):
+    46: 	    <h1>Voici la page de la ville <%= @city.name%> </h1>
+    47: 	    </br>
+    48: 	    </br>
+    49: 	    <% Gossip.where(@user.city).each do |gossip| %>
+    50: 			<div class="card">
+    51: 				<div class="card-body">
+    52: 			  		<h3 class="card-title"><%=link_to gossip.title, gossip_path(gossip.id) %> </h3>
+  
+app/views/cities/show.html.erb:49:in `_app_views_cities_show_html_erb___3783426335436069865_70098721427360'
+Started GET "/cities/72" for ::1 at 2019-08-07 10:51:19 +0200
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/cities_controller.rb:4
+  Rendering cities/show.html.erb within layouts/application
+  Rendered cities/show.html.erb within layouts/application (10.2ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `user' for nil:NilClass):
+    46: 	    <h1>Voici la page de la ville <%= @city.name%> </h1>
+    47: 	    </br>
+    48: 	    </br>
+    49: 	    <% Gossip.where(@gossip.user.city).each do |gossip| %>
+    50: 			<div class="card">
+    51: 				<div class="card-body">
+    52: 			  		<h3 class="card-title"><%=link_to gossip.title, gossip_path(gossip.id) %> </h3>
+  
+app/views/cities/show.html.erb:49:in `_app_views_cities_show_html_erb___3783426335436069865_70098722557980'
+Started GET "/cities/72" for ::1 at 2019-08-07 10:52:13 +0200
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/cities_controller.rb:4
+  Rendering cities/show.html.erb within layouts/application
+  Rendered cities/show.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `user' for nil:NilClass):
+    46: 	    <h1>Voici la page de la ville <%= @city.name%> </h1>
+    47: 	    </br>
+    48: 	    </br>
+    49: 	    <% Gossip.find(@gossip.user.city).each do |gossip| %>
+    50: 			<div class="card">
+    51: 				<div class="card-body">
+    52: 			  		<h3 class="card-title"><%=link_to gossip.title, gossip_path(gossip.id) %> </h3>
+  
+app/views/cities/show.html.erb:49:in `_app_views_cities_show_html_erb___3783426335436069865_70098727767020'
